@@ -134,10 +134,14 @@ def placebo_test(panel: pd.DataFrame, treated: list[str], controls: list[str], o
         return did(g, at).effect
 
     real = est(opening)
-    fakes = [est(t) for t in placebo_dates(panel, opening, weeks_each_side)]
+    dates = placebo_dates(panel, opening, weeks_each_side)
+    fakes = [est(t) for t in dates]
     bigger = sum(abs(f) >= abs(real) for f in fakes)
     return {"real_effect_log": round(real, 4), "placebos": len(fakes),
             "placebo_effects_log": [round(f, 4) for f in fakes],
             "share_as_large": round(bigger / len(fakes), 3) if fakes else None,
+            "count_as_large": int(bigger),
+            "first_date": dates[0].strftime("%Y-%m-%d") if dates else None,
+            "last_date": dates[-1].strftime("%Y-%m-%d") if dates else None,
             "p_value": round((bigger + 1) / (len(fakes) + 1), 3) if fakes else None,
             "weeks_each_side": weeks_each_side}

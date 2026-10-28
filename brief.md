@@ -11,9 +11,9 @@
 
 ## Findings
 
-1. **No measurable change where the new stations opened.** Sydney CBD and North Sydney grew after opening, but the control centres grew by about the same amount. Effect -0.9% (95% interval -2.8% to +1.0%). 24 of 26 placebo dates gave an effect at least this big.
-2. **About 9% more evening travel at the northern end of the line.** Chatswood and Macquarie Park rose +9.2% relative to the controls (+6.8% to +11.5%). Their gap with the controls had no trend for 18 months before opening, then stepped up in the opening month and stayed up. The real opening date beats all 26 placebo dates.
-3. **The result holds up.** Across nine checks (shorter and longer windows, dropping the holidays, Tue-Thu or Fridays only, one control at a time) the northern effect stays between +7.0% and +12.8%, and the new-station effect stays between -2.3% and +0.6%.
+1. **No measurable change where the new stations opened.** Sydney CBD and North Sydney grew after opening, but the control centres grew by about the same amount. Effect -0.9% (95% interval -2.8% to +1.0%). In the placebo test, 24 of 26 fake opening dates gave an effect as big as the real one.
+2. **About 9% more evening travel at the northern end of the line.** Chatswood and Macquarie Park rose +9.2% relative to the controls (+6.8% to +11.5%). Their gap with the controls had no trend for 18 months before opening and stayed up for the year after. The real opening date beats all 26 placebo dates. Chatswood stepped up in the opening week itself; Macquarie Park had started rising a few weeks before opening, so not all of its rise can be put down to the metro.
+3. **The result holds up.** Across eight checks (shorter and longer windows, dropping the holidays, Tue-Thu or Fridays only, one control at a time) the northern effect stays between +7.0% and +12.8%, and the new-station effect stays between -2.3% and +0.6%.
 
 ## What it doesn't show
 

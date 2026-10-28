@@ -2,7 +2,7 @@
 
 Did the Sydney Metro City & Southwest opening on 19 August 2024 change evening travel from the centres on the new line?
 
-This repo estimates it from Opal tap-on data with three causal inference methods: difference-in-differences, an event study and synthetic control, checked with placebo dates and nine robustness checks. Every number on the site page comes from `results.json`, which CI rebuilds and compares on every push.
+This repo estimates it from Opal tap-on data with three causal inference methods: difference-in-differences, an event study and synthetic control, checked with placebo dates and eight robustness checks. Every number on the site page comes from `results.json`, which CI rebuilds and compares on every push.
 
 ## Short answer
 
@@ -16,7 +16,7 @@ This repo estimates it from Opal tap-on data with three causal inference methods
 Relative to Parramatta and Strathfield, 78 weeks before opening against 47 weeks after (to mid August 2025).
 
 - **The centres that got new stations show no change.** All four of them grew after opening, but Parramatta and Strathfield grew about as much, so the difference is close to zero.
-- **Chatswood and Macquarie Park rose about 9% more than the controls.** That holds across every robustness check (+7.0% to +12.8%), the gap had no trend in the 18 months before opening, and the real opening date gives a bigger effect than all 26 placebo dates.
+- **Chatswood and Macquarie Park rose about 9% more than the controls.** That holds across every robustness check (+7.0% to +12.8%), the gap had no trend in the 18 months before opening, and the real opening date gives a bigger effect than all 26 placebo dates. Chatswood stepped up in the opening week; Macquarie Park had started rising a few weeks before opening, so part of its rise may not be the metro.
 - **This data can't say why.** Region-level tap-ons don't separate train, metro and bus, or say where people went. The likely story is that a one-seat ride into the city made the northern end of the line more useful, but that's a hypothesis, not something this analysis shows.
 
 See `brief.md` for the one-page version and `METHOD.md` for the reasoning behind each choice.
@@ -41,11 +41,11 @@ The measure is the weekly mean of clean weekday evening tap-ons per centre, logg
 - **Pre-trend test**: the slope of the gap before opening. Near zero means the groups were moving together before the change.
 - **Event study**: the effect month by month, 12 months either side, against the three months just before opening.
 - **Synthetic control**: for each treated centre, a weighted mix of the controls (weights non-negative, summing to 1, plus an intercept) fitted to the pre-opening weeks. The gap after opening is the estimate.
-- **Placebo dates**: the same DiD run at 26 fake opening dates between July 2022 and the real date. The p-value is the share of fake dates giving an effect at least as big. With 26 placebos the smallest possible p is 1/27 = 0.037.
+- **Placebo dates**: the same DiD, using 26 weeks either side of the date, run at the real opening and at 26 fake opening dates every two weeks from February 2023 to February 2024 (their windows start in July 2022). The p-value is the share of fake dates giving an effect at least as big as the real date's. With 26 placebos the smallest possible p is 1/27 = 0.037. The shorter window means the real-date effect here (+6.6% north, +0.6% new stations) differs from the main estimate.
 
 ## Robustness
 
-Each row changes one thing from the main specification.
+Each row after the first changes one thing from the main specification.
 
 | Check | New stations | Line extended | Chatswood |
 |---|---|---|---|
