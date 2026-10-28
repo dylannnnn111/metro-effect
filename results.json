@@ -1,0 +1,4356 @@
+{
+ "question": "Did the Sydney Metro City & Southwest opening change evening travel from the centres on the new line?",
+ "opening": "2024-08-19",
+ "measure": "Mean weekday tap-ons, 3pm-7pm, per centre per week (log). Clean weekdays only; a week needs 3+.",
+ "data": {
+  "file": "data/daily_evening_tapons.csv",
+  "sha256": "f947334596249b8702f1bfca30d7dfe6aac7682d10102c2a29866476b3e78fc7",
+  "source": "TfNSW Opal Tap Data via the Commute Pulse pipeline (github.com/dylannnnn111/commute-pulse, out/daily_evening_tapons.csv)",
+  "first_day": "2020-01-01",
+  "last_day": "2026-10-03",
+  "weeks_in_panel": 328
+ },
+ "design": {
+  "pre_start": "2023-02-06",
+  "post_end": "2025-08-15",
+  "stable_start": "2022-07-04",
+  "controls": [
+   "Parramatta",
+   "Strathfield"
+  ],
+  "new_stations": [
+   "Sydney CBD",
+   "North Sydney"
+  ],
+  "line_extended": [
+   "Chatswood",
+   "Macquarie Park"
+  ],
+  "weeks_pre": 78,
+  "weeks_post": 47
+ },
+ "levels": {
+  "Sydney CBD": {
+   "pre_mean": 214647,
+   "post_mean": 231795,
+   "raw_change_pct": 7.99
+  },
+  "North Sydney": {
+   "pre_mean": 19674,
+   "post_mean": 21532,
+   "raw_change_pct": 9.44
+  },
+  "Chatswood": {
+   "pre_mean": 13099,
+   "post_mean": 15427,
+   "raw_change_pct": 17.77
+  },
+  "Macquarie Park": {
+   "pre_mean": 12033,
+   "post_mean": 14666,
+   "raw_change_pct": 21.88
+  },
+  "Parramatta": {
+   "pre_mean": 25901,
+   "post_mean": 28827,
+   "raw_change_pct": 11.3
+  },
+  "Strathfield": {
+   "pre_mean": 8345,
+   "post_mean": 9042,
+   "raw_change_pct": 8.35
+  }
+ },
+ "groups": {
+  "new_stations": {
+   "label": "Centres with new metro stations (CBD, North Sydney)",
+   "treated": [
+    "Sydney CBD",
+    "North Sydney"
+   ],
+   "did": {
+    "effect_log": -0.009,
+    "effect_pct": -0.9,
+    "se": 0.0097,
+    "ci95_pct": [
+     -2.77,
+     1.0
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "pre_trend": {
+    "slope_per_year_log": -0.0049,
+    "se": 0.0122,
+    "p_value": 0.69
+   },
+   "event_study": [
+    {
+     "month": -12,
+     "effect_log": -0.0249,
+     "lo": -0.0414,
+     "hi": -0.0085,
+     "reference": false
+    },
+    {
+     "month": -11,
+     "effect_log": -0.0058,
+     "lo": -0.0231,
+     "hi": 0.0114,
+     "reference": false
+    },
+    {
+     "month": -10,
+     "effect_log": 0.0003,
+     "lo": -0.0164,
+     "hi": 0.017,
+     "reference": false
+    },
+    {
+     "month": -9,
+     "effect_log": -0.0072,
+     "lo": -0.0246,
+     "hi": 0.0103,
+     "reference": false
+    },
+    {
+     "month": -8,
+     "effect_log": 0.026,
+     "lo": 0.0085,
+     "hi": 0.0435,
+     "reference": false
+    },
+    {
+     "month": -7,
+     "effect_log": 0.056,
+     "lo": 0.0377,
+     "hi": 0.0744,
+     "reference": false
+    },
+    {
+     "month": -6,
+     "effect_log": 0.0407,
+     "lo": 0.0247,
+     "hi": 0.0568,
+     "reference": false
+    },
+    {
+     "month": -5,
+     "effect_log": 0.0073,
+     "lo": -0.0111,
+     "hi": 0.0258,
+     "reference": false
+    },
+    {
+     "month": -4,
+     "effect_log": 0.0175,
+     "lo": -0.0005,
+     "hi": 0.0355,
+     "reference": false
+    },
+    {
+     "month": -3,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -2,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -1,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": 0,
+     "effect_log": -0.0171,
+     "lo": -0.0343,
+     "hi": 0.0002,
+     "reference": false
+    },
+    {
+     "month": 1,
+     "effect_log": 0.0121,
+     "lo": -0.0079,
+     "hi": 0.0321,
+     "reference": false
+    },
+    {
+     "month": 2,
+     "effect_log": 0.0017,
+     "lo": -0.0156,
+     "hi": 0.019,
+     "reference": false
+    },
+    {
+     "month": 3,
+     "effect_log": -0.0123,
+     "lo": -0.0294,
+     "hi": 0.0049,
+     "reference": false
+    },
+    {
+     "month": 4,
+     "effect_log": 0.0319,
+     "lo": 0.0162,
+     "hi": 0.0476,
+     "reference": false
+    },
+    {
+     "month": 5,
+     "effect_log": 0.0602,
+     "lo": 0.0338,
+     "hi": 0.0866,
+     "reference": false
+    },
+    {
+     "month": 6,
+     "effect_log": 0.011,
+     "lo": -0.0113,
+     "hi": 0.0333,
+     "reference": false
+    },
+    {
+     "month": 7,
+     "effect_log": -0.0126,
+     "lo": -0.0287,
+     "hi": 0.0036,
+     "reference": false
+    },
+    {
+     "month": 8,
+     "effect_log": 0.0169,
+     "lo": -0.0042,
+     "hi": 0.038,
+     "reference": false
+    },
+    {
+     "month": 9,
+     "effect_log": -0.0452,
+     "lo": -0.0612,
+     "hi": -0.0291,
+     "reference": false
+    },
+    {
+     "month": 10,
+     "effect_log": -0.0344,
+     "lo": -0.0505,
+     "hi": -0.0182,
+     "reference": false
+    },
+    {
+     "month": 11,
+     "effect_log": 0.0237,
+     "lo": -0.0071,
+     "hi": 0.0546,
+     "reference": false
+    },
+    {
+     "month": 12,
+     "effect_log": -0.0277,
+     "lo": -0.0434,
+     "hi": -0.0121,
+     "reference": false
+    }
+   ],
+   "placebo": {
+    "real_effect_log": 0.0055,
+    "placebos": 26,
+    "placebo_effects_log": [
+     -0.0121,
+     -0.018,
+     -0.0263,
+     -0.0304,
+     -0.043,
+     -0.052,
+     -0.0472,
+     -0.0408,
+     -0.0334,
+     -0.024,
+     -0.021,
+     -0.0199,
+     -0.0075,
+     0.0021,
+     0.0101,
+     0.0155,
+     0.0186,
+     0.0233,
+     0.0305,
+     0.029,
+     0.0246,
+     0.0252,
+     0.0181,
+     0.0195,
+     0.0139,
+     0.002
+    ],
+    "share_as_large": 0.923,
+    "p_value": 0.926,
+    "weeks_each_side": 26
+   }
+  },
+  "line_extended": {
+   "label": "On the line, no new station (Chatswood, Macquarie Park)",
+   "treated": [
+    "Chatswood",
+    "Macquarie Park"
+   ],
+   "did": {
+    "effect_log": 0.0876,
+    "effect_pct": 9.16,
+    "se": 0.011,
+    "ci95_pct": [
+     6.82,
+     11.54
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "pre_trend": {
+    "slope_per_year_log": -0.0045,
+    "se": 0.0132,
+    "p_value": 0.731
+   },
+   "event_study": [
+    {
+     "month": -12,
+     "effect_log": 0.0266,
+     "lo": 0.0118,
+     "hi": 0.0414,
+     "reference": false
+    },
+    {
+     "month": -11,
+     "effect_log": -0.0211,
+     "lo": -0.0428,
+     "hi": 0.0006,
+     "reference": false
+    },
+    {
+     "month": -10,
+     "effect_log": 0.0153,
+     "lo": -0.0038,
+     "hi": 0.0344,
+     "reference": false
+    },
+    {
+     "month": -9,
+     "effect_log": -0.0477,
+     "lo": -0.0685,
+     "hi": -0.027,
+     "reference": false
+    },
+    {
+     "month": -8,
+     "effect_log": 0.0001,
+     "lo": -0.0199,
+     "hi": 0.02,
+     "reference": false
+    },
+    {
+     "month": -7,
+     "effect_log": -0.0336,
+     "lo": -0.0471,
+     "hi": -0.0202,
+     "reference": false
+    },
+    {
+     "month": -6,
+     "effect_log": 0.0251,
+     "lo": -0.0109,
+     "hi": 0.061,
+     "reference": false
+    },
+    {
+     "month": -5,
+     "effect_log": 0.0499,
+     "lo": 0.0363,
+     "hi": 0.0636,
+     "reference": false
+    },
+    {
+     "month": -4,
+     "effect_log": 0.0069,
+     "lo": -0.0167,
+     "hi": 0.0305,
+     "reference": false
+    },
+    {
+     "month": -3,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -2,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -1,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": 0,
+     "effect_log": 0.0666,
+     "lo": 0.0482,
+     "hi": 0.085,
+     "reference": false
+    },
+    {
+     "month": 1,
+     "effect_log": 0.068,
+     "lo": 0.0459,
+     "hi": 0.0901,
+     "reference": false
+    },
+    {
+     "month": 2,
+     "effect_log": 0.083,
+     "lo": 0.061,
+     "hi": 0.105,
+     "reference": false
+    },
+    {
+     "month": 3,
+     "effect_log": 0.0565,
+     "lo": 0.0429,
+     "hi": 0.0701,
+     "reference": false
+    },
+    {
+     "month": 4,
+     "effect_log": 0.1002,
+     "lo": 0.0828,
+     "hi": 0.1176,
+     "reference": false
+    },
+    {
+     "month": 5,
+     "effect_log": 0.0829,
+     "lo": 0.0662,
+     "hi": 0.0995,
+     "reference": false
+    },
+    {
+     "month": 6,
+     "effect_log": 0.0602,
+     "lo": 0.0195,
+     "hi": 0.1008,
+     "reference": false
+    },
+    {
+     "month": 7,
+     "effect_log": 0.1433,
+     "lo": 0.1296,
+     "hi": 0.1571,
+     "reference": false
+    },
+    {
+     "month": 8,
+     "effect_log": 0.127,
+     "lo": 0.1132,
+     "hi": 0.1407,
+     "reference": false
+    },
+    {
+     "month": 9,
+     "effect_log": 0.1157,
+     "lo": 0.1025,
+     "hi": 0.1289,
+     "reference": false
+    },
+    {
+     "month": 10,
+     "effect_log": 0.0686,
+     "lo": 0.0481,
+     "hi": 0.0891,
+     "reference": false
+    },
+    {
+     "month": 11,
+     "effect_log": 0.0955,
+     "lo": 0.0784,
+     "hi": 0.1126,
+     "reference": false
+    },
+    {
+     "month": 12,
+     "effect_log": 0.1261,
+     "lo": 0.1102,
+     "hi": 0.142,
+     "reference": false
+    }
+   ],
+   "placebo": {
+    "real_effect_log": 0.0637,
+    "placebos": 26,
+    "placebo_effects_log": [
+     -0.0105,
+     -0.0146,
+     -0.0203,
+     -0.0267,
+     -0.0206,
+     -0.0148,
+     -0.0219,
+     -0.0235,
+     -0.0254,
+     -0.024,
+     -0.0189,
+     -0.0171,
+     -0.0152,
+     -0.0213,
+     -0.0174,
+     -0.0122,
+     0.0069,
+     0.0026,
+     -0.002,
+     0.0035,
+     0.0086,
+     0.0194,
+     0.0161,
+     0.014,
+     0.0191,
+     0.0261
+    ],
+    "share_as_large": 0.0,
+    "p_value": 0.037,
+    "weeks_each_side": 26
+   }
+  },
+  "sydney_cbd": {
+   "label": "Sydney CBD",
+   "treated": [
+    "Sydney CBD"
+   ],
+   "did": {
+    "effect_log": -0.0152,
+    "effect_pct": -1.51,
+    "se": 0.0142,
+    "ci95_pct": [
+     -4.22,
+     1.28
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "pre_trend": {
+    "slope_per_year_log": 0.0138,
+    "se": 0.0165,
+    "p_value": 0.404
+   },
+   "event_study": [
+    {
+     "month": -12,
+     "effect_log": -0.0455,
+     "lo": -0.0697,
+     "hi": -0.0213,
+     "reference": false
+    },
+    {
+     "month": -11,
+     "effect_log": -0.0023,
+     "lo": -0.0335,
+     "hi": 0.029,
+     "reference": false
+    },
+    {
+     "month": -10,
+     "effect_log": 0.0123,
+     "lo": -0.0161,
+     "hi": 0.0406,
+     "reference": false
+    },
+    {
+     "month": -9,
+     "effect_log": 0.0004,
+     "lo": -0.0245,
+     "hi": 0.0253,
+     "reference": false
+    },
+    {
+     "month": -8,
+     "effect_log": 0.0663,
+     "lo": 0.0394,
+     "hi": 0.0932,
+     "reference": false
+    },
+    {
+     "month": -7,
+     "effect_log": 0.0837,
+     "lo": 0.0588,
+     "hi": 0.1086,
+     "reference": false
+    },
+    {
+     "month": -6,
+     "effect_log": 0.0556,
+     "lo": 0.0296,
+     "hi": 0.0816,
+     "reference": false
+    },
+    {
+     "month": -5,
+     "effect_log": 0.0133,
+     "lo": -0.0117,
+     "hi": 0.0384,
+     "reference": false
+    },
+    {
+     "month": -4,
+     "effect_log": 0.0378,
+     "lo": 0.0123,
+     "hi": 0.0633,
+     "reference": false
+    },
+    {
+     "month": -3,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -2,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -1,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": 0,
+     "effect_log": -0.0433,
+     "lo": -0.0679,
+     "hi": -0.0187,
+     "reference": false
+    },
+    {
+     "month": 1,
+     "effect_log": 0.0089,
+     "lo": -0.0242,
+     "hi": 0.0419,
+     "reference": false
+    },
+    {
+     "month": 2,
+     "effect_log": -0.0037,
+     "lo": -0.031,
+     "hi": 0.0236,
+     "reference": false
+    },
+    {
+     "month": 3,
+     "effect_log": -0.0372,
+     "lo": -0.0661,
+     "hi": -0.0084,
+     "reference": false
+    },
+    {
+     "month": 4,
+     "effect_log": 0.046,
+     "lo": 0.0206,
+     "hi": 0.0713,
+     "reference": false
+    },
+    {
+     "month": 5,
+     "effect_log": 0.0963,
+     "lo": 0.0674,
+     "hi": 0.1253,
+     "reference": false
+    },
+    {
+     "month": 6,
+     "effect_log": 0.0012,
+     "lo": -0.024,
+     "hi": 0.0265,
+     "reference": false
+    },
+    {
+     "month": 7,
+     "effect_log": -0.0245,
+     "lo": -0.0493,
+     "hi": 0.0003,
+     "reference": false
+    },
+    {
+     "month": 8,
+     "effect_log": 0.0225,
+     "lo": -0.0091,
+     "hi": 0.0541,
+     "reference": false
+    },
+    {
+     "month": 9,
+     "effect_log": -0.0722,
+     "lo": -0.0968,
+     "hi": -0.0476,
+     "reference": false
+    },
+    {
+     "month": 10,
+     "effect_log": -0.0445,
+     "lo": -0.0724,
+     "hi": -0.0166,
+     "reference": false
+    },
+    {
+     "month": 11,
+     "effect_log": 0.0353,
+     "lo": -0.0098,
+     "hi": 0.0805,
+     "reference": false
+    },
+    {
+     "month": 12,
+     "effect_log": -0.0496,
+     "lo": -0.0737,
+     "hi": -0.0256,
+     "reference": false
+    }
+   ],
+   "placebo": {
+    "real_effect_log": -0.0032,
+    "placebos": 26,
+    "placebo_effects_log": [
+     -0.0123,
+     -0.0176,
+     -0.0289,
+     -0.0315,
+     -0.0395,
+     -0.0548,
+     -0.0476,
+     -0.0396,
+     -0.025,
+     -0.0122,
+     -0.0042,
+     -0.001,
+     0.0155,
+     0.0295,
+     0.0401,
+     0.048,
+     0.0497,
+     0.0473,
+     0.058,
+     0.054,
+     0.0459,
+     0.0414,
+     0.0287,
+     0.0226,
+     0.0139,
+     0.0002
+    ],
+    "share_as_large": 0.923,
+    "p_value": 0.926,
+    "weeks_each_side": 26
+   }
+  },
+  "north_sydney": {
+   "label": "North Sydney",
+   "treated": [
+    "North Sydney"
+   ],
+   "did": {
+    "effect_log": -0.0029,
+    "effect_pct": -0.29,
+    "se": 0.0079,
+    "ci95_pct": [
+     -1.81,
+     1.26
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "pre_trend": {
+    "slope_per_year_log": -0.0235,
+    "se": 0.0112,
+    "p_value": 0.036
+   },
+   "event_study": [
+    {
+     "month": -12,
+     "effect_log": -0.0043,
+     "lo": -0.0181,
+     "hi": 0.0095,
+     "reference": false
+    },
+    {
+     "month": -11,
+     "effect_log": -0.0094,
+     "lo": -0.0218,
+     "hi": 0.003,
+     "reference": false
+    },
+    {
+     "month": -10,
+     "effect_log": -0.0117,
+     "lo": -0.0226,
+     "hi": -0.0007,
+     "reference": false
+    },
+    {
+     "month": -9,
+     "effect_log": -0.0148,
+     "lo": -0.0284,
+     "hi": -0.0011,
+     "reference": false
+    },
+    {
+     "month": -8,
+     "effect_log": -0.0143,
+     "lo": -0.036,
+     "hi": 0.0074,
+     "reference": false
+    },
+    {
+     "month": -7,
+     "effect_log": 0.0284,
+     "lo": 0.006,
+     "hi": 0.0508,
+     "reference": false
+    },
+    {
+     "month": -6,
+     "effect_log": 0.0259,
+     "lo": 0.0147,
+     "hi": 0.037,
+     "reference": false
+    },
+    {
+     "month": -5,
+     "effect_log": 0.0014,
+     "lo": -0.0151,
+     "hi": 0.0179,
+     "reference": false
+    },
+    {
+     "month": -4,
+     "effect_log": -0.0028,
+     "lo": -0.0162,
+     "hi": 0.0106,
+     "reference": false
+    },
+    {
+     "month": -3,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -2,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -1,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": 0,
+     "effect_log": 0.0092,
+     "lo": -0.0037,
+     "hi": 0.0221,
+     "reference": false
+    },
+    {
+     "month": 1,
+     "effect_log": 0.0154,
+     "lo": 0.0046,
+     "hi": 0.0261,
+     "reference": false
+    },
+    {
+     "month": 2,
+     "effect_log": 0.0071,
+     "lo": -0.0038,
+     "hi": 0.0179,
+     "reference": false
+    },
+    {
+     "month": 3,
+     "effect_log": 0.0127,
+     "lo": 0.0014,
+     "hi": 0.024,
+     "reference": false
+    },
+    {
+     "month": 4,
+     "effect_log": 0.0179,
+     "lo": 0.0059,
+     "hi": 0.0299,
+     "reference": false
+    },
+    {
+     "month": 5,
+     "effect_log": 0.0241,
+     "lo": -0.0046,
+     "hi": 0.0528,
+     "reference": false
+    },
+    {
+     "month": 6,
+     "effect_log": 0.0208,
+     "lo": -0.006,
+     "hi": 0.0475,
+     "reference": false
+    },
+    {
+     "month": 7,
+     "effect_log": -0.0007,
+     "lo": -0.0113,
+     "hi": 0.0099,
+     "reference": false
+    },
+    {
+     "month": 8,
+     "effect_log": 0.0113,
+     "lo": -0.0016,
+     "hi": 0.0242,
+     "reference": false
+    },
+    {
+     "month": 9,
+     "effect_log": -0.0181,
+     "lo": -0.0308,
+     "hi": -0.0055,
+     "reference": false
+    },
+    {
+     "month": 10,
+     "effect_log": -0.0243,
+     "lo": -0.0371,
+     "hi": -0.0114,
+     "reference": false
+    },
+    {
+     "month": 11,
+     "effect_log": 0.0122,
+     "lo": -0.0062,
+     "hi": 0.0305,
+     "reference": false
+    },
+    {
+     "month": 12,
+     "effect_log": -0.0059,
+     "lo": -0.0162,
+     "hi": 0.0045,
+     "reference": false
+    }
+   ],
+   "placebo": {
+    "real_effect_log": 0.0141,
+    "placebos": 26,
+    "placebo_effects_log": [
+     -0.0118,
+     -0.0184,
+     -0.0238,
+     -0.0294,
+     -0.0465,
+     -0.0492,
+     -0.0469,
+     -0.0421,
+     -0.0418,
+     -0.0358,
+     -0.0378,
+     -0.0389,
+     -0.0305,
+     -0.0253,
+     -0.02,
+     -0.0169,
+     -0.0126,
+     -0.0007,
+     0.003,
+     0.004,
+     0.0034,
+     0.0089,
+     0.0074,
+     0.0165,
+     0.0139,
+     0.0039
+    ],
+    "share_as_large": 0.615,
+    "p_value": 0.63,
+    "weeks_each_side": 26
+   }
+  },
+  "chatswood": {
+   "label": "Chatswood",
+   "treated": [
+    "Chatswood"
+   ],
+   "did": {
+    "effect_log": 0.0705,
+    "effect_pct": 7.3,
+    "se": 0.0079,
+    "ci95_pct": [
+     5.64,
+     8.98
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "pre_trend": {
+    "slope_per_year_log": -0.0012,
+    "se": 0.0073,
+    "p_value": 0.869
+   },
+   "event_study": [
+    {
+     "month": -12,
+     "effect_log": -0.0187,
+     "lo": -0.0293,
+     "hi": -0.0081,
+     "reference": false
+    },
+    {
+     "month": -11,
+     "effect_log": -0.0095,
+     "lo": -0.0221,
+     "hi": 0.003,
+     "reference": false
+    },
+    {
+     "month": -10,
+     "effect_log": -0.0124,
+     "lo": -0.0256,
+     "hi": 0.0008,
+     "reference": false
+    },
+    {
+     "month": -9,
+     "effect_log": 0.0054,
+     "lo": -0.0058,
+     "hi": 0.0166,
+     "reference": false
+    },
+    {
+     "month": -8,
+     "effect_log": 0.0505,
+     "lo": 0.0336,
+     "hi": 0.0674,
+     "reference": false
+    },
+    {
+     "month": -7,
+     "effect_log": -0.0045,
+     "lo": -0.0203,
+     "hi": 0.0113,
+     "reference": false
+    },
+    {
+     "month": -6,
+     "effect_log": 0.0168,
+     "lo": 0.004,
+     "hi": 0.0297,
+     "reference": false
+    },
+    {
+     "month": -5,
+     "effect_log": -0.0274,
+     "lo": -0.044,
+     "hi": -0.0108,
+     "reference": false
+    },
+    {
+     "month": -4,
+     "effect_log": -0.0251,
+     "lo": -0.0376,
+     "hi": -0.0127,
+     "reference": false
+    },
+    {
+     "month": -3,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -2,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -1,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": 0,
+     "effect_log": 0.0164,
+     "lo": -0.0082,
+     "hi": 0.041,
+     "reference": false
+    },
+    {
+     "month": 1,
+     "effect_log": 0.0421,
+     "lo": 0.0313,
+     "hi": 0.053,
+     "reference": false
+    },
+    {
+     "month": 2,
+     "effect_log": 0.0332,
+     "lo": 0.0208,
+     "hi": 0.0455,
+     "reference": false
+    },
+    {
+     "month": 3,
+     "effect_log": 0.0702,
+     "lo": 0.0554,
+     "hi": 0.0849,
+     "reference": false
+    },
+    {
+     "month": 4,
+     "effect_log": 0.1286,
+     "lo": 0.1118,
+     "hi": 0.1454,
+     "reference": false
+    },
+    {
+     "month": 5,
+     "effect_log": 0.0743,
+     "lo": 0.0568,
+     "hi": 0.0918,
+     "reference": false
+    },
+    {
+     "month": 6,
+     "effect_log": 0.0602,
+     "lo": 0.0407,
+     "hi": 0.0798,
+     "reference": false
+    },
+    {
+     "month": 7,
+     "effect_log": 0.0552,
+     "lo": 0.0439,
+     "hi": 0.0665,
+     "reference": false
+    },
+    {
+     "month": 8,
+     "effect_log": 0.0546,
+     "lo": 0.0439,
+     "hi": 0.0654,
+     "reference": false
+    },
+    {
+     "month": 9,
+     "effect_log": 0.0588,
+     "lo": 0.0473,
+     "hi": 0.0703,
+     "reference": false
+    },
+    {
+     "month": 10,
+     "effect_log": 0.0889,
+     "lo": 0.0784,
+     "hi": 0.0994,
+     "reference": false
+    },
+    {
+     "month": 11,
+     "effect_log": 0.0818,
+     "lo": 0.065,
+     "hi": 0.0986,
+     "reference": false
+    },
+    {
+     "month": 12,
+     "effect_log": 0.0675,
+     "lo": 0.0545,
+     "hi": 0.0806,
+     "reference": false
+    }
+   ],
+   "placebo": {
+    "real_effect_log": 0.0725,
+    "placebos": 26,
+    "placebo_effects_log": [
+     -0.0245,
+     -0.0269,
+     -0.026,
+     -0.0231,
+     -0.0242,
+     -0.0246,
+     -0.0271,
+     -0.0236,
+     -0.0194,
+     -0.0156,
+     -0.0115,
+     -0.005,
+     0.0015,
+     0.0088,
+     0.0117,
+     0.0097,
+     0.0077,
+     0.0097,
+     0.0085,
+     0.0072,
+     0.0028,
+     0.0031,
+     -0.0007,
+     -0.0019,
+     -0.0006,
+     -0.0077
+    ],
+    "share_as_large": 0.0,
+    "p_value": 0.037,
+    "weeks_each_side": 26
+   }
+  },
+  "macquarie_park": {
+   "label": "Macquarie Park",
+   "treated": [
+    "Macquarie Park"
+   ],
+   "did": {
+    "effect_log": 0.1047,
+    "effect_pct": 11.04,
+    "se": 0.0254,
+    "ci95_pct": [
+     5.64,
+     16.72
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "pre_trend": {
+    "slope_per_year_log": -0.0079,
+    "se": 0.0306,
+    "p_value": 0.798
+   },
+   "event_study": [
+    {
+     "month": -12,
+     "effect_log": 0.0719,
+     "lo": 0.0338,
+     "hi": 0.11,
+     "reference": false
+    },
+    {
+     "month": -11,
+     "effect_log": -0.0326,
+     "lo": -0.0857,
+     "hi": 0.0204,
+     "reference": false
+    },
+    {
+     "month": -10,
+     "effect_log": 0.043,
+     "lo": -0.0079,
+     "hi": 0.0939,
+     "reference": false
+    },
+    {
+     "month": -9,
+     "effect_log": -0.1008,
+     "lo": -0.147,
+     "hi": -0.0547,
+     "reference": false
+    },
+    {
+     "month": -8,
+     "effect_log": -0.0504,
+     "lo": -0.0904,
+     "hi": -0.0104,
+     "reference": false
+    },
+    {
+     "month": -7,
+     "effect_log": -0.0628,
+     "lo": -0.0997,
+     "hi": -0.0258,
+     "reference": false
+    },
+    {
+     "month": -6,
+     "effect_log": 0.0333,
+     "lo": -0.0483,
+     "hi": 0.1148,
+     "reference": false
+    },
+    {
+     "month": -5,
+     "effect_log": 0.1272,
+     "lo": 0.0911,
+     "hi": 0.1633,
+     "reference": false
+    },
+    {
+     "month": -4,
+     "effect_log": 0.039,
+     "lo": -0.0102,
+     "hi": 0.0882,
+     "reference": false
+    },
+    {
+     "month": -3,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -2,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": -1,
+     "effect_log": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "reference": true
+    },
+    {
+     "month": 0,
+     "effect_log": 0.1167,
+     "lo": 0.0807,
+     "hi": 0.1528,
+     "reference": false
+    },
+    {
+     "month": 1,
+     "effect_log": 0.0938,
+     "lo": 0.0418,
+     "hi": 0.1459,
+     "reference": false
+    },
+    {
+     "month": 2,
+     "effect_log": 0.1328,
+     "lo": 0.0782,
+     "hi": 0.1875,
+     "reference": false
+    },
+    {
+     "month": 3,
+     "effect_log": 0.0428,
+     "lo": 0.0054,
+     "hi": 0.0802,
+     "reference": false
+    },
+    {
+     "month": 4,
+     "effect_log": 0.0718,
+     "lo": 0.0341,
+     "hi": 0.1095,
+     "reference": false
+    },
+    {
+     "month": 5,
+     "effect_log": 0.0915,
+     "lo": 0.0539,
+     "hi": 0.129,
+     "reference": false
+    },
+    {
+     "month": 6,
+     "effect_log": 0.0601,
+     "lo": -0.0109,
+     "hi": 0.131,
+     "reference": false
+    },
+    {
+     "month": 7,
+     "effect_log": 0.2314,
+     "lo": 0.1938,
+     "hi": 0.2691,
+     "reference": false
+    },
+    {
+     "month": 8,
+     "effect_log": 0.1993,
+     "lo": 0.1624,
+     "hi": 0.2363,
+     "reference": false
+    },
+    {
+     "month": 9,
+     "effect_log": 0.1726,
+     "lo": 0.1362,
+     "hi": 0.2089,
+     "reference": false
+    },
+    {
+     "month": 10,
+     "effect_log": 0.0484,
+     "lo": 0.0003,
+     "hi": 0.0964,
+     "reference": false
+    },
+    {
+     "month": 11,
+     "effect_log": 0.1092,
+     "lo": 0.0674,
+     "hi": 0.151,
+     "reference": false
+    },
+    {
+     "month": 12,
+     "effect_log": 0.1847,
+     "lo": 0.1471,
+     "hi": 0.2223,
+     "reference": false
+    }
+   ],
+   "placebo": {
+    "real_effect_log": 0.055,
+    "placebos": 26,
+    "placebo_effects_log": [
+     0.0035,
+     -0.0023,
+     -0.0146,
+     -0.0303,
+     -0.0171,
+     -0.005,
+     -0.0167,
+     -0.0235,
+     -0.0314,
+     -0.0324,
+     -0.0263,
+     -0.0292,
+     -0.032,
+     -0.0514,
+     -0.0465,
+     -0.0341,
+     0.0062,
+     -0.0046,
+     -0.0125,
+     -0.0002,
+     0.0145,
+     0.0356,
+     0.0328,
+     0.0298,
+     0.0388,
+     0.06
+    ],
+    "share_as_large": 0.038,
+    "p_value": 0.074,
+    "weeks_each_side": 26
+   }
+  }
+ },
+ "robustness": [
+  {
+   "check": "Main specification",
+   "new_stations": {
+    "effect_log": -0.009,
+    "effect_pct": -0.9,
+    "se": 0.0097,
+    "ci95_pct": [
+     -2.77,
+     1.0
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "line_extended": {
+    "effect_log": 0.0876,
+    "effect_pct": 9.16,
+    "se": 0.011,
+    "ci95_pct": [
+     6.82,
+     11.54
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "chatswood": {
+    "effect_log": 0.0705,
+    "effect_pct": 7.3,
+    "se": 0.0079,
+    "ci95_pct": [
+     5.64,
+     8.98
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   }
+  },
+  {
+   "check": "6 months after opening",
+   "new_stations": {
+    "effect_log": 0.0058,
+    "effect_pct": 0.58,
+    "se": 0.0111,
+    "ci95_pct": [
+     -1.59,
+     2.79
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 22
+   },
+   "line_extended": {
+    "effect_log": 0.0676,
+    "effect_pct": 6.99,
+    "se": 0.0079,
+    "ci95_pct": [
+     5.36,
+     8.65
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 22
+   },
+   "chatswood": {
+    "effect_log": 0.0659,
+    "effect_pct": 6.81,
+    "se": 0.013,
+    "ci95_pct": [
+     4.12,
+     9.58
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 22
+   }
+  },
+  {
+   "check": "Everything after opening (to Sep 2026)",
+   "new_stations": {
+    "effect_log": -0.0101,
+    "effect_pct": -1.01,
+    "se": 0.0078,
+    "ci95_pct": [
+     -2.52,
+     0.53
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 100
+   },
+   "line_extended": {
+    "effect_log": 0.1019,
+    "effect_pct": 10.73,
+    "se": 0.0099,
+    "ci95_pct": [
+     8.61,
+     12.89
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 100
+   },
+   "chatswood": {
+    "effect_log": 0.0888,
+    "effect_pct": 9.29,
+    "se": 0.009,
+    "ci95_pct": [
+     7.38,
+     11.23
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 100
+   }
+  },
+  {
+   "check": "Longer before-period (from Jul 2022)",
+   "new_stations": {
+    "effect_log": -0.0117,
+    "effect_pct": -1.17,
+    "se": 0.01,
+    "ci95_pct": [
+     -3.08,
+     0.78
+    ],
+    "weeks_pre": 103,
+    "weeks_post": 47
+   },
+   "line_extended": {
+    "effect_log": 0.0829,
+    "effect_pct": 8.64,
+    "se": 0.0107,
+    "ci95_pct": [
+     6.38,
+     10.95
+    ],
+    "weeks_pre": 103,
+    "weeks_post": 47
+   },
+   "chatswood": {
+    "effect_log": 0.0651,
+    "effect_pct": 6.73,
+    "se": 0.0089,
+    "ci95_pct": [
+     4.88,
+     8.61
+    ],
+    "weeks_pre": 103,
+    "weeks_post": 47
+   }
+  },
+  {
+   "check": "Christmas to January dropped",
+   "new_stations": {
+    "effect_log": -0.0115,
+    "effect_pct": -1.14,
+    "se": 0.0079,
+    "ci95_pct": [
+     -2.65,
+     0.39
+    ],
+    "weeks_pre": 73,
+    "weeks_post": 43
+   },
+   "line_extended": {
+    "effect_log": 0.0856,
+    "effect_pct": 8.94,
+    "se": 0.012,
+    "ci95_pct": [
+     6.41,
+     11.53
+    ],
+    "weeks_pre": 73,
+    "weeks_post": 43
+   },
+   "chatswood": {
+    "effect_log": 0.0687,
+    "effect_pct": 7.11,
+    "se": 0.0073,
+    "ci95_pct": [
+     5.58,
+     8.66
+    ],
+    "weeks_pre": 73,
+    "weeks_post": 43
+   }
+  },
+  {
+   "check": "Tue-Thu only",
+   "new_stations": {
+    "effect_log": -0.0122,
+    "effect_pct": -1.21,
+    "se": 0.0103,
+    "ci95_pct": [
+     -3.19,
+     0.81
+    ],
+    "weeks_pre": 74,
+    "weeks_post": 42
+   },
+   "line_extended": {
+    "effect_log": 0.0843,
+    "effect_pct": 8.8,
+    "se": 0.0122,
+    "ci95_pct": [
+     6.24,
+     11.42
+    ],
+    "weeks_pre": 74,
+    "weeks_post": 42
+   },
+   "chatswood": {
+    "effect_log": 0.0703,
+    "effect_pct": 7.28,
+    "se": 0.0101,
+    "ci95_pct": [
+     5.17,
+     9.43
+    ],
+    "weeks_pre": 74,
+    "weeks_post": 42
+   }
+  },
+  {
+   "check": "Fridays only",
+   "new_stations": {
+    "effect_log": 0.0016,
+    "effect_pct": 0.16,
+    "se": 0.0075,
+    "ci95_pct": [
+     -1.3,
+     1.64
+    ],
+    "weeks_pre": 74,
+    "weeks_post": 46
+   },
+   "line_extended": {
+    "effect_log": 0.1205,
+    "effect_pct": 12.81,
+    "se": 0.0114,
+    "ci95_pct": [
+     10.32,
+     15.36
+    ],
+    "weeks_pre": 74,
+    "weeks_post": 46
+   },
+   "chatswood": {
+    "effect_log": 0.0882,
+    "effect_pct": 9.22,
+    "se": 0.0094,
+    "ci95_pct": [
+     7.23,
+     11.25
+    ],
+    "weeks_pre": 74,
+    "weeks_post": 46
+   }
+  },
+  {
+   "check": "Parramatta as the only control",
+   "new_stations": {
+    "effect_log": -0.0227,
+    "effect_pct": -2.25,
+    "se": 0.0171,
+    "ci95_pct": [
+     -5.48,
+     1.09
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "line_extended": {
+    "effect_log": 0.0739,
+    "effect_pct": 7.67,
+    "se": 0.012,
+    "ci95_pct": [
+     5.16,
+     10.23
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "chatswood": {
+    "effect_log": 0.0568,
+    "effect_pct": 5.84,
+    "se": 0.0111,
+    "ci95_pct": [
+     3.56,
+     8.17
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   }
+  },
+  {
+   "check": "Strathfield as the only control",
+   "new_stations": {
+    "effect_log": 0.0047,
+    "effect_pct": 0.47,
+    "se": 0.0122,
+    "ci95_pct": [
+     -1.9,
+     2.9
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "line_extended": {
+    "effect_log": 0.1013,
+    "effect_pct": 10.66,
+    "se": 0.0188,
+    "ci95_pct": [
+     6.66,
+     14.81
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   },
+   "chatswood": {
+    "effect_log": 0.0842,
+    "effect_pct": 8.78,
+    "se": 0.016,
+    "ci95_pct": [
+     5.42,
+     12.25
+    ],
+    "weeks_pre": 78,
+    "weeks_post": 47
+   }
+  }
+ ],
+ "synthetic_control": {
+  "Sydney CBD": {
+   "weights": {
+    "Parramatta": 0.896,
+    "Strathfield": 0.104
+   },
+   "intercept": 2.2336,
+   "pre_rmse_log": 0.0477,
+   "post_rmse_log": 0.059,
+   "rmse_ratio": 1.24,
+   "effect_log": -0.026,
+   "effect_pct": -2.57,
+   "weekly": [
+    {
+     "week": "2023-02-06",
+     "actual": 199380,
+     "synthetic": 197023
+    },
+    {
+     "week": "2023-02-13",
+     "actual": 205280,
+     "synthetic": 198327
+    },
+    {
+     "week": "2023-02-20",
+     "actual": 211040,
+     "synthetic": 203169
+    },
+    {
+     "week": "2023-02-27",
+     "actual": 215620,
+     "synthetic": 206754
+    },
+    {
+     "week": "2023-03-06",
+     "actual": 205820,
+     "synthetic": 204548
+    },
+    {
+     "week": "2023-03-13",
+     "actual": 209120,
+     "synthetic": 212478
+    },
+    {
+     "week": "2023-03-20",
+     "actual": 207860,
+     "synthetic": 215437
+    },
+    {
+     "week": "2023-03-27",
+     "actual": 210100,
+     "synthetic": 187413
+    },
+    {
+     "week": "2023-04-03",
+     "actual": 204375,
+     "synthetic": 209414
+    },
+    {
+     "week": "2023-04-10",
+     "actual": 195225,
+     "synthetic": 186563
+    },
+    {
+     "week": "2023-04-17",
+     "actual": 204940,
+     "synthetic": 191764
+    },
+    {
+     "week": "2023-04-24",
+     "actual": 196275,
+     "synthetic": 198131
+    },
+    {
+     "week": "2023-05-01",
+     "actual": 210400,
+     "synthetic": 219404
+    },
+    {
+     "week": "2023-05-08",
+     "actual": 205940,
+     "synthetic": 217696
+    },
+    {
+     "week": "2023-05-15",
+     "actual": 204400,
+     "synthetic": 214741
+    },
+    {
+     "week": "2023-05-22",
+     "actual": 196940,
+     "synthetic": 214869
+    },
+    {
+     "week": "2023-05-29",
+     "actual": 201020,
+     "synthetic": 214863
+    },
+    {
+     "week": "2023-06-05",
+     "actual": 199980,
+     "synthetic": 214409
+    },
+    {
+     "week": "2023-06-12",
+     "actual": 205200,
+     "synthetic": 215808
+    },
+    {
+     "week": "2023-06-19",
+     "actual": 203100,
+     "synthetic": 211022
+    },
+    {
+     "week": "2023-06-26",
+     "actual": 198340,
+     "synthetic": 199620
+    },
+    {
+     "week": "2023-07-03",
+     "actual": 200520,
+     "synthetic": 190597
+    },
+    {
+     "week": "2023-07-10",
+     "actual": 206660,
+     "synthetic": 196139
+    },
+    {
+     "week": "2023-07-17",
+     "actual": 207080,
+     "synthetic": 213880
+    },
+    {
+     "week": "2023-07-24",
+     "actual": 209420,
+     "synthetic": 222427
+    },
+    {
+     "week": "2023-07-31",
+     "actual": 212720,
+     "synthetic": 224185
+    },
+    {
+     "week": "2023-08-07",
+     "actual": 211320,
+     "synthetic": 222431
+    },
+    {
+     "week": "2023-08-14",
+     "actual": 217720,
+     "synthetic": 225741
+    },
+    {
+     "week": "2023-08-21",
+     "actual": 214980,
+     "synthetic": 225747
+    },
+    {
+     "week": "2023-08-28",
+     "actual": 211480,
+     "synthetic": 223866
+    },
+    {
+     "week": "2023-09-04",
+     "actual": 211200,
+     "synthetic": 221745
+    },
+    {
+     "week": "2023-09-11",
+     "actual": 215960,
+     "synthetic": 217928
+    },
+    {
+     "week": "2023-09-18",
+     "actual": 215280,
+     "synthetic": 219189
+    },
+    {
+     "week": "2023-09-25",
+     "actual": 216160,
+     "synthetic": 205680
+    },
+    {
+     "week": "2023-10-02",
+     "actual": 217300,
+     "synthetic": 203097
+    },
+    {
+     "week": "2023-10-09",
+     "actual": 217020,
+     "synthetic": 222047
+    },
+    {
+     "week": "2023-10-16",
+     "actual": 216760,
+     "synthetic": 217331
+    },
+    {
+     "week": "2023-10-23",
+     "actual": 217520,
+     "synthetic": 218307
+    },
+    {
+     "week": "2023-10-30",
+     "actual": 219240,
+     "synthetic": 217645
+    },
+    {
+     "week": "2023-11-06",
+     "actual": 219260,
+     "synthetic": 217608
+    },
+    {
+     "week": "2023-11-13",
+     "actual": 220400,
+     "synthetic": 218223
+    },
+    {
+     "week": "2023-11-20",
+     "actual": 221480,
+     "synthetic": 221691
+    },
+    {
+     "week": "2023-11-27",
+     "actual": 217340,
+     "synthetic": 215496
+    },
+    {
+     "week": "2023-12-04",
+     "actual": 218600,
+     "synthetic": 212014
+    },
+    {
+     "week": "2023-12-11",
+     "actual": 208720,
+     "synthetic": 201658
+    },
+    {
+     "week": "2023-12-18",
+     "actual": 183080,
+     "synthetic": 170309
+    },
+    {
+     "week": "2024-01-08",
+     "actual": 187820,
+     "synthetic": 172852
+    },
+    {
+     "week": "2024-01-15",
+     "actual": 202560,
+     "synthetic": 184529
+    },
+    {
+     "week": "2024-01-22",
+     "actual": 212325,
+     "synthetic": 195891
+    },
+    {
+     "week": "2024-01-29",
+     "actual": 213540,
+     "synthetic": 204119
+    },
+    {
+     "week": "2024-02-05",
+     "actual": 226940,
+     "synthetic": 220500
+    },
+    {
+     "week": "2024-02-12",
+     "actual": 239680,
+     "synthetic": 224817
+    },
+    {
+     "week": "2024-02-19",
+     "actual": 234260,
+     "synthetic": 216346
+    },
+    {
+     "week": "2024-02-26",
+     "actual": 241720,
+     "synthetic": 228552
+    },
+    {
+     "week": "2024-03-04",
+     "actual": 242200,
+     "synthetic": 241179
+    },
+    {
+     "week": "2024-03-11",
+     "actual": 240360,
+     "synthetic": 239507
+    },
+    {
+     "week": "2024-03-18",
+     "actual": 232960,
+     "synthetic": 237766
+    },
+    {
+     "week": "2024-03-25",
+     "actual": 230400,
+     "synthetic": 229272
+    },
+    {
+     "week": "2024-04-01",
+     "actual": 217275,
+     "synthetic": 218398
+    },
+    {
+     "week": "2024-04-08",
+     "actual": 237620,
+     "synthetic": 231140
+    },
+    {
+     "week": "2024-04-15",
+     "actual": 215040,
+     "synthetic": 206292
+    },
+    {
+     "week": "2024-04-22",
+     "actual": 222475,
+     "synthetic": 206244
+    },
+    {
+     "week": "2024-04-29",
+     "actual": 226580,
+     "synthetic": 228909
+    },
+    {
+     "week": "2024-05-06",
+     "actual": 227760,
+     "synthetic": 233063
+    },
+    {
+     "week": "2024-05-13",
+     "actual": 227800,
+     "synthetic": 234511
+    },
+    {
+     "week": "2024-05-20",
+     "actual": 220080,
+     "synthetic": 232629
+    },
+    {
+     "week": "2024-05-27",
+     "actual": 220380,
+     "synthetic": 230293
+    },
+    {
+     "week": "2024-06-03",
+     "actual": 215980,
+     "synthetic": 221519
+    },
+    {
+     "week": "2024-06-10",
+     "actual": 211525,
+     "synthetic": 218127
+    },
+    {
+     "week": "2024-06-17",
+     "actual": 215800,
+     "synthetic": 218541
+    },
+    {
+     "week": "2024-06-24",
+     "actual": 216800,
+     "synthetic": 218351
+    },
+    {
+     "week": "2024-07-01",
+     "actual": 212200,
+     "synthetic": 215663
+    },
+    {
+     "week": "2024-07-08",
+     "actual": 220280,
+     "synthetic": 208063
+    },
+    {
+     "week": "2024-07-15",
+     "actual": 221140,
+     "synthetic": 208777
+    },
+    {
+     "week": "2024-07-22",
+     "actual": 214960,
+     "synthetic": 234236
+    },
+    {
+     "week": "2024-07-29",
+     "actual": 221700,
+     "synthetic": 240754
+    },
+    {
+     "week": "2024-08-05",
+     "actual": 225420,
+     "synthetic": 240424
+    },
+    {
+     "week": "2024-08-12",
+     "actual": 229320,
+     "synthetic": 239905
+    },
+    {
+     "week": "2024-08-19",
+     "actual": 236280,
+     "synthetic": 243349
+    },
+    {
+     "week": "2024-08-26",
+     "actual": 231180,
+     "synthetic": 241342
+    },
+    {
+     "week": "2024-09-02",
+     "actual": 228740,
+     "synthetic": 239980
+    },
+    {
+     "week": "2024-09-09",
+     "actual": 232600,
+     "synthetic": 234338
+    },
+    {
+     "week": "2024-09-16",
+     "actual": 236840,
+     "synthetic": 237843
+    },
+    {
+     "week": "2024-09-23",
+     "actual": 229240,
+     "synthetic": 226501
+    },
+    {
+     "week": "2024-09-30",
+     "actual": 230600,
+     "synthetic": 214722
+    },
+    {
+     "week": "2024-10-07",
+     "actual": 219800,
+     "synthetic": 213100
+    },
+    {
+     "week": "2024-10-14",
+     "actual": 229480,
+     "synthetic": 233382
+    },
+    {
+     "week": "2024-10-21",
+     "actual": 238860,
+     "synthetic": 237142
+    },
+    {
+     "week": "2024-10-28",
+     "actual": 234900,
+     "synthetic": 229684
+    },
+    {
+     "week": "2024-11-04",
+     "actual": 231600,
+     "synthetic": 230807
+    },
+    {
+     "week": "2024-11-11",
+     "actual": 206680,
+     "synthetic": 230328
+    },
+    {
+     "week": "2024-11-18",
+     "actual": 223760,
+     "synthetic": 220318
+    },
+    {
+     "week": "2024-11-25",
+     "actual": 229780,
+     "synthetic": 225358
+    },
+    {
+     "week": "2024-12-02",
+     "actual": 229360,
+     "synthetic": 220529
+    },
+    {
+     "week": "2024-12-09",
+     "actual": 221620,
+     "synthetic": 217728
+    },
+    {
+     "week": "2024-12-16",
+     "actual": 206000,
+     "synthetic": 198702
+    },
+    {
+     "week": "2025-01-06",
+     "actual": 186200,
+     "synthetic": 174886
+    },
+    {
+     "week": "2025-01-13",
+     "actual": 185400,
+     "synthetic": 184611
+    },
+    {
+     "week": "2025-01-20",
+     "actual": 221760,
+     "synthetic": 205392
+    },
+    {
+     "week": "2025-02-10",
+     "actual": 245950,
+     "synthetic": 248054
+    },
+    {
+     "week": "2025-02-17",
+     "actual": 239360,
+     "synthetic": 233298
+    },
+    {
+     "week": "2025-02-24",
+     "actual": 240800,
+     "synthetic": 246111
+    },
+    {
+     "week": "2025-03-03",
+     "actual": 254160,
+     "synthetic": 261088
+    },
+    {
+     "week": "2025-03-10",
+     "actual": 253380,
+     "synthetic": 261682
+    },
+    {
+     "week": "2025-03-17",
+     "actual": 252600,
+     "synthetic": 265827
+    },
+    {
+     "week": "2025-03-24",
+     "actual": 246320,
+     "synthetic": 264273
+    },
+    {
+     "week": "2025-03-31",
+     "actual": 248780,
+     "synthetic": 259514
+    },
+    {
+     "week": "2025-04-07",
+     "actual": 251600,
+     "synthetic": 264192
+    },
+    {
+     "week": "2025-04-14",
+     "actual": 244650,
+     "synthetic": 238683
+    },
+    {
+     "week": "2025-04-28",
+     "actual": 234260,
+     "synthetic": 253573
+    },
+    {
+     "week": "2025-05-05",
+     "actual": 245280,
+     "synthetic": 268905
+    },
+    {
+     "week": "2025-05-12",
+     "actual": 237580,
+     "synthetic": 264991
+    },
+    {
+     "week": "2025-05-19",
+     "actual": 199925,
+     "synthetic": 218903
+    },
+    {
+     "week": "2025-05-26",
+     "actual": 234775,
+     "synthetic": 261964
+    },
+    {
+     "week": "2025-06-02",
+     "actual": 230340,
+     "synthetic": 253196
+    },
+    {
+     "week": "2025-06-09",
+     "actual": 234550,
+     "synthetic": 255066
+    },
+    {
+     "week": "2025-06-16",
+     "actual": 232180,
+     "synthetic": 253917
+    },
+    {
+     "week": "2025-06-23",
+     "actual": 228760,
+     "synthetic": 248463
+    },
+    {
+     "week": "2025-06-30",
+     "actual": 218167,
+     "synthetic": 225568
+    },
+    {
+     "week": "2025-07-07",
+     "actual": 234640,
+     "synthetic": 225967
+    },
+    {
+     "week": "2025-07-14",
+     "actual": 235140,
+     "synthetic": 227115
+    },
+    {
+     "week": "2025-07-21",
+     "actual": 232500,
+     "synthetic": 255089
+    },
+    {
+     "week": "2025-07-28",
+     "actual": 243267,
+     "synthetic": 263038
+    },
+    {
+     "week": "2025-08-04",
+     "actual": 241140,
+     "synthetic": 263333
+    },
+    {
+     "week": "2025-08-11",
+     "actual": 243580,
+     "synthetic": 264748
+    }
+   ]
+  },
+  "North Sydney": {
+   "weights": {
+    "Parramatta": 0.5675,
+    "Strathfield": 0.4325
+   },
+   "intercept": 0.2153,
+   "pre_rmse_log": 0.0313,
+   "post_rmse_log": 0.0283,
+   "rmse_ratio": 0.9,
+   "effect_log": -0.0047,
+   "effect_pct": -0.47,
+   "weekly": [
+    {
+     "week": "2023-02-06",
+     "actual": 19440,
+     "synthetic": 18054
+    },
+    {
+     "week": "2023-02-13",
+     "actual": 19500,
+     "synthetic": 18336
+    },
+    {
+     "week": "2023-02-20",
+     "actual": 19580,
+     "synthetic": 19158
+    },
+    {
+     "week": "2023-02-27",
+     "actual": 20080,
+     "synthetic": 19454
+    },
+    {
+     "week": "2023-03-06",
+     "actual": 19600,
+     "synthetic": 19040
+    },
+    {
+     "week": "2023-03-13",
+     "actual": 20340,
+     "synthetic": 19658
+    },
+    {
+     "week": "2023-03-20",
+     "actual": 20220,
+     "synthetic": 19848
+    },
+    {
+     "week": "2023-03-27",
+     "actual": 20000,
+     "synthetic": 17335
+    },
+    {
+     "week": "2023-04-03",
+     "actual": 19675,
+     "synthetic": 19132
+    },
+    {
+     "week": "2023-04-10",
+     "actual": 16925,
+     "synthetic": 16718
+    },
+    {
+     "week": "2023-04-17",
+     "actual": 18140,
+     "synthetic": 17349
+    },
+    {
+     "week": "2023-04-24",
+     "actual": 18400,
+     "synthetic": 18346
+    },
+    {
+     "week": "2023-05-01",
+     "actual": 20280,
+     "synthetic": 20353
+    },
+    {
+     "week": "2023-05-08",
+     "actual": 19720,
+     "synthetic": 20048
+    },
+    {
+     "week": "2023-05-15",
+     "actual": 19500,
+     "synthetic": 19739
+    },
+    {
+     "week": "2023-05-22",
+     "actual": 19600,
+     "synthetic": 19764
+    },
+    {
+     "week": "2023-05-29",
+     "actual": 19560,
+     "synthetic": 19677
+    },
+    {
+     "week": "2023-06-05",
+     "actual": 19480,
+     "synthetic": 19805
+    },
+    {
+     "week": "2023-06-12",
+     "actual": 19775,
+     "synthetic": 19662
+    },
+    {
+     "week": "2023-06-19",
+     "actual": 19060,
+     "synthetic": 19246
+    },
+    {
+     "week": "2023-06-26",
+     "actual": 17745,
+     "synthetic": 17850
+    },
+    {
+     "week": "2023-07-03",
+     "actual": 17520,
+     "synthetic": 17158
+    },
+    {
+     "week": "2023-07-10",
+     "actual": 18500,
+     "synthetic": 17934
+    },
+    {
+     "week": "2023-07-17",
+     "actual": 19780,
+     "synthetic": 19603
+    },
+    {
+     "week": "2023-07-24",
+     "actual": 19820,
+     "synthetic": 20219
+    },
+    {
+     "week": "2023-07-31",
+     "actual": 20560,
+     "synthetic": 20564
+    },
+    {
+     "week": "2023-08-07",
+     "actual": 20800,
+     "synthetic": 20496
+    },
+    {
+     "week": "2023-08-14",
+     "actual": 20520,
+     "synthetic": 20809
+    },
+    {
+     "week": "2023-08-21",
+     "actual": 20400,
+     "synthetic": 20775
+    },
+    {
+     "week": "2023-08-28",
+     "actual": 19965,
+     "synthetic": 20562
+    },
+    {
+     "week": "2023-09-04",
+     "actual": 20240,
+     "synthetic": 20318
+    },
+    {
+     "week": "2023-09-11",
+     "actual": 20100,
+     "synthetic": 20198
+    },
+    {
+     "week": "2023-09-18",
+     "actual": 19440,
+     "synthetic": 20101
+    },
+    {
+     "week": "2023-09-25",
+     "actual": 18380,
+     "synthetic": 18868
+    },
+    {
+     "week": "2023-10-02",
+     "actual": 17900,
+     "synthetic": 18571
+    },
+    {
+     "week": "2023-10-09",
+     "actual": 20020,
+     "synthetic": 20301
+    },
+    {
+     "week": "2023-10-16",
+     "actual": 19960,
+     "synthetic": 20163
+    },
+    {
+     "week": "2023-10-23",
+     "actual": 19800,
+     "synthetic": 20101
+    },
+    {
+     "week": "2023-10-30",
+     "actual": 19720,
+     "synthetic": 20114
+    },
+    {
+     "week": "2023-11-06",
+     "actual": 19940,
+     "synthetic": 19871
+    },
+    {
+     "week": "2023-11-13",
+     "actual": 19900,
+     "synthetic": 20300
+    },
+    {
+     "week": "2023-11-20",
+     "actual": 19840,
+     "synthetic": 20773
+    },
+    {
+     "week": "2023-11-27",
+     "actual": 19600,
+     "synthetic": 20005
+    },
+    {
+     "week": "2023-12-04",
+     "actual": 19200,
+     "synthetic": 19529
+    },
+    {
+     "week": "2023-12-11",
+     "actual": 18420,
+     "synthetic": 17911
+    },
+    {
+     "week": "2023-12-18",
+     "actual": 14265,
+     "synthetic": 15536
+    },
+    {
+     "week": "2024-01-08",
+     "actual": 15740,
+     "synthetic": 16099
+    },
+    {
+     "week": "2024-01-15",
+     "actual": 17020,
+     "synthetic": 16931
+    },
+    {
+     "week": "2024-01-22",
+     "actual": 18425,
+     "synthetic": 17718
+    },
+    {
+     "week": "2024-01-29",
+     "actual": 19740,
+     "synthetic": 18621
+    },
+    {
+     "week": "2024-02-05",
+     "actual": 21200,
+     "synthetic": 20434
+    },
+    {
+     "week": "2024-02-12",
+     "actual": 20900,
+     "synthetic": 20806
+    },
+    {
+     "week": "2024-02-19",
+     "actual": 20360,
+     "synthetic": 19918
+    },
+    {
+     "week": "2024-02-26",
+     "actual": 21360,
+     "synthetic": 21076
+    },
+    {
+     "week": "2024-03-04",
+     "actual": 21660,
+     "synthetic": 22069
+    },
+    {
+     "week": "2024-03-11",
+     "actual": 21420,
+     "synthetic": 21971
+    },
+    {
+     "week": "2024-03-18",
+     "actual": 21320,
+     "synthetic": 21645
+    },
+    {
+     "week": "2024-03-25",
+     "actual": 21225,
+     "synthetic": 20668
+    },
+    {
+     "week": "2024-04-01",
+     "actual": 18850,
+     "synthetic": 19825
+    },
+    {
+     "week": "2024-04-08",
+     "actual": 21340,
+     "synthetic": 21053
+    },
+    {
+     "week": "2024-04-15",
+     "actual": 18540,
+     "synthetic": 18623
+    },
+    {
+     "week": "2024-04-22",
+     "actual": 19050,
+     "synthetic": 19203
+    },
+    {
+     "week": "2024-04-29",
+     "actual": 20760,
+     "synthetic": 20959
+    },
+    {
+     "week": "2024-05-06",
+     "actual": 20880,
+     "synthetic": 21510
+    },
+    {
+     "week": "2024-05-13",
+     "actual": 21040,
+     "synthetic": 21317
+    },
+    {
+     "week": "2024-05-20",
+     "actual": 21000,
+     "synthetic": 21296
+    },
+    {
+     "week": "2024-05-27",
+     "actual": 20620,
+     "synthetic": 20899
+    },
+    {
+     "week": "2024-06-03",
+     "actual": 19845,
+     "synthetic": 20149
+    },
+    {
+     "week": "2024-06-10",
+     "actual": 20175,
+     "synthetic": 19708
+    },
+    {
+     "week": "2024-06-17",
+     "actual": 20220,
+     "synthetic": 20046
+    },
+    {
+     "week": "2024-06-24",
+     "actual": 19820,
+     "synthetic": 19914
+    },
+    {
+     "week": "2024-07-01",
+     "actual": 18760,
+     "synthetic": 18971
+    },
+    {
+     "week": "2024-07-08",
+     "actual": 18780,
+     "synthetic": 18398
+    },
+    {
+     "week": "2024-07-15",
+     "actual": 18680,
+     "synthetic": 18639
+    },
+    {
+     "week": "2024-07-22",
+     "actual": 20240,
+     "synthetic": 21107
+    },
+    {
+     "week": "2024-07-29",
+     "actual": 20900,
+     "synthetic": 22027
+    },
+    {
+     "week": "2024-08-05",
+     "actual": 21720,
+     "synthetic": 21973
+    },
+    {
+     "week": "2024-08-12",
+     "actual": 21760,
+     "synthetic": 22064
+    },
+    {
+     "week": "2024-08-19",
+     "actual": 22840,
+     "synthetic": 22367
+    },
+    {
+     "week": "2024-08-26",
+     "actual": 22740,
+     "synthetic": 22471
+    },
+    {
+     "week": "2024-09-02",
+     "actual": 22000,
+     "synthetic": 22068
+    },
+    {
+     "week": "2024-09-09",
+     "actual": 21740,
+     "synthetic": 21721
+    },
+    {
+     "week": "2024-09-16",
+     "actual": 22260,
+     "synthetic": 21806
+    },
+    {
+     "week": "2024-09-23",
+     "actual": 20540,
+     "synthetic": 20870
+    },
+    {
+     "week": "2024-09-30",
+     "actual": 20320,
+     "synthetic": 19600
+    },
+    {
+     "week": "2024-10-07",
+     "actual": 19400,
+     "synthetic": 19366
+    },
+    {
+     "week": "2024-10-14",
+     "actual": 21960,
+     "synthetic": 21965
+    },
+    {
+     "week": "2024-10-21",
+     "actual": 22360,
+     "synthetic": 22518
+    },
+    {
+     "week": "2024-10-28",
+     "actual": 21860,
+     "synthetic": 21513
+    },
+    {
+     "week": "2024-11-04",
+     "actual": 21840,
+     "synthetic": 21580
+    },
+    {
+     "week": "2024-11-11",
+     "actual": 21700,
+     "synthetic": 21468
+    },
+    {
+     "week": "2024-11-18",
+     "actual": 21100,
+     "synthetic": 20658
+    },
+    {
+     "week": "2024-11-25",
+     "actual": 21180,
+     "synthetic": 21338
+    },
+    {
+     "week": "2024-12-02",
+     "actual": 20840,
+     "synthetic": 20470
+    },
+    {
+     "week": "2024-12-09",
+     "actual": 20140,
+     "synthetic": 19738
+    },
+    {
+     "week": "2024-12-16",
+     "actual": 17640,
+     "synthetic": 17870
+    },
+    {
+     "week": "2025-01-06",
+     "actual": 15420,
+     "synthetic": 15852
+    },
+    {
+     "week": "2025-01-13",
+     "actual": 15850,
+     "synthetic": 16290
+    },
+    {
+     "week": "2025-01-20",
+     "actual": 19400,
+     "synthetic": 17877
+    },
+    {
+     "week": "2025-02-10",
+     "actual": 24000,
+     "synthetic": 22540
+    },
+    {
+     "week": "2025-02-17",
+     "actual": 22240,
+     "synthetic": 21710
+    },
+    {
+     "week": "2025-02-24",
+     "actual": 21660,
+     "synthetic": 22700
+    },
+    {
+     "week": "2025-03-03",
+     "actual": 23720,
+     "synthetic": 23915
+    },
+    {
+     "week": "2025-03-10",
+     "actual": 23660,
+     "synthetic": 23688
+    },
+    {
+     "week": "2025-03-17",
+     "actual": 23540,
+     "synthetic": 23996
+    },
+    {
+     "week": "2025-03-24",
+     "actual": 23520,
+     "synthetic": 23907
+    },
+    {
+     "week": "2025-03-31",
+     "actual": 23340,
+     "synthetic": 23581
+    },
+    {
+     "week": "2025-04-07",
+     "actual": 23140,
+     "synthetic": 23526
+    },
+    {
+     "week": "2025-04-14",
+     "actual": 21000,
+     "synthetic": 20498
+    },
+    {
+     "week": "2025-04-28",
+     "actual": 22070,
+     "synthetic": 22600
+    },
+    {
+     "week": "2025-05-05",
+     "actual": 23180,
+     "synthetic": 24046
+    },
+    {
+     "week": "2025-05-12",
+     "actual": 22820,
+     "synthetic": 23823
+    },
+    {
+     "week": "2025-05-19",
+     "actual": 19475,
+     "synthetic": 20136
+    },
+    {
+     "week": "2025-05-26",
+     "actual": 23225,
+     "synthetic": 23378
+    },
+    {
+     "week": "2025-06-02",
+     "actual": 22040,
+     "synthetic": 22669
+    },
+    {
+     "week": "2025-06-09",
+     "actual": 22550,
+     "synthetic": 23052
+    },
+    {
+     "week": "2025-06-16",
+     "actual": 22000,
+     "synthetic": 22728
+    },
+    {
+     "week": "2025-06-23",
+     "actual": 21640,
+     "synthetic": 22611
+    },
+    {
+     "week": "2025-06-30",
+     "actual": 18900,
+     "synthetic": 20008
+    },
+    {
+     "week": "2025-07-07",
+     "actual": 20240,
+     "synthetic": 19692
+    },
+    {
+     "week": "2025-07-14",
+     "actual": 20080,
+     "synthetic": 19793
+    },
+    {
+     "week": "2025-07-21",
+     "actual": 21680,
+     "synthetic": 22722
+    },
+    {
+     "week": "2025-07-28",
+     "actual": 22750,
+     "synthetic": 23094
+    },
+    {
+     "week": "2025-08-04",
+     "actual": 23100,
+     "synthetic": 23532
+    },
+    {
+     "week": "2025-08-11",
+     "actual": 23300,
+     "synthetic": 23756
+    }
+   ]
+  },
+  "Chatswood": {
+   "weights": {
+    "Parramatta": 0.6567,
+    "Strathfield": 0.3433
+   },
+   "intercept": -0.2925,
+   "pre_rmse_log": 0.0242,
+   "post_rmse_log": 0.0723,
+   "rmse_ratio": 2.99,
+   "effect_log": 0.0662,
+   "effect_pct": 6.84,
+   "weekly": [
+    {
+     "week": "2023-02-06",
+     "actual": 12520,
+     "synthetic": 12019
+    },
+    {
+     "week": "2023-02-13",
+     "actual": 12680,
+     "synthetic": 12177
+    },
+    {
+     "week": "2023-02-20",
+     "actual": 13000,
+     "synthetic": 12655
+    },
+    {
+     "week": "2023-02-27",
+     "actual": 12860,
+     "synthetic": 12858
+    },
+    {
+     "week": "2023-03-06",
+     "actual": 12760,
+     "synthetic": 12621
+    },
+    {
+     "week": "2023-03-13",
+     "actual": 12820,
+     "synthetic": 13053
+    },
+    {
+     "week": "2023-03-20",
+     "actual": 12800,
+     "synthetic": 13194
+    },
+    {
+     "week": "2023-03-27",
+     "actual": 11300,
+     "synthetic": 11511
+    },
+    {
+     "week": "2023-04-03",
+     "actual": 12800,
+     "synthetic": 12747
+    },
+    {
+     "week": "2023-04-10",
+     "actual": 11125,
+     "synthetic": 11197
+    },
+    {
+     "week": "2023-04-17",
+     "actual": 11440,
+     "synthetic": 11590
+    },
+    {
+     "week": "2023-04-24",
+     "actual": 12725,
+     "synthetic": 12179
+    },
+    {
+     "week": "2023-05-01",
+     "actual": 13080,
+     "synthetic": 13504
+    },
+    {
+     "week": "2023-05-08",
+     "actual": 13200,
+     "synthetic": 13329
+    },
+    {
+     "week": "2023-05-15",
+     "actual": 12900,
+     "synthetic": 13130
+    },
+    {
+     "week": "2023-05-22",
+     "actual": 12780,
+     "synthetic": 13144
+    },
+    {
+     "week": "2023-05-29",
+     "actual": 13240,
+     "synthetic": 13102
+    },
+    {
+     "week": "2023-06-05",
+     "actual": 13000,
+     "synthetic": 13156
+    },
+    {
+     "week": "2023-06-12",
+     "actual": 13700,
+     "synthetic": 13110
+    },
+    {
+     "week": "2023-06-19",
+     "actual": 13060,
+     "synthetic": 12829
+    },
+    {
+     "week": "2023-06-26",
+     "actual": 12100,
+     "synthetic": 11962
+    },
+    {
+     "week": "2023-07-03",
+     "actual": 11580,
+     "synthetic": 11478
+    },
+    {
+     "week": "2023-07-10",
+     "actual": 11700,
+     "synthetic": 11946
+    },
+    {
+     "week": "2023-07-17",
+     "actual": 13040,
+     "synthetic": 13049
+    },
+    {
+     "week": "2023-07-24",
+     "actual": 13380,
+     "synthetic": 13489
+    },
+    {
+     "week": "2023-07-31",
+     "actual": 13540,
+     "synthetic": 13686
+    },
+    {
+     "week": "2023-08-07",
+     "actual": 13560,
+     "synthetic": 13624
+    },
+    {
+     "week": "2023-08-14",
+     "actual": 13640,
+     "synthetic": 13831
+    },
+    {
+     "week": "2023-08-21",
+     "actual": 13640,
+     "synthetic": 13814
+    },
+    {
+     "week": "2023-08-28",
+     "actual": 13460,
+     "synthetic": 13680
+    },
+    {
+     "week": "2023-09-04",
+     "actual": 13520,
+     "synthetic": 13527
+    },
+    {
+     "week": "2023-09-11",
+     "actual": 13640,
+     "synthetic": 13405
+    },
+    {
+     "week": "2023-09-18",
+     "actual": 13320,
+     "synthetic": 13379
+    },
+    {
+     "week": "2023-09-25",
+     "actual": 12240,
+     "synthetic": 12557
+    },
+    {
+     "week": "2023-10-02",
+     "actual": 11975,
+     "synthetic": 12370
+    },
+    {
+     "week": "2023-10-09",
+     "actual": 13360,
+     "synthetic": 13523
+    },
+    {
+     "week": "2023-10-16",
+     "actual": 13420,
+     "synthetic": 13378
+    },
+    {
+     "week": "2023-10-23",
+     "actual": 13440,
+     "synthetic": 13364
+    },
+    {
+     "week": "2023-10-30",
+     "actual": 13460,
+     "synthetic": 13359
+    },
+    {
+     "week": "2023-11-06",
+     "actual": 13520,
+     "synthetic": 13241
+    },
+    {
+     "week": "2023-11-13",
+     "actual": 13700,
+     "synthetic": 13459
+    },
+    {
+     "week": "2023-11-20",
+     "actual": 13800,
+     "synthetic": 13745
+    },
+    {
+     "week": "2023-11-27",
+     "actual": 13540,
+     "synthetic": 13271
+    },
+    {
+     "week": "2023-12-04",
+     "actual": 13280,
+     "synthetic": 12982
+    },
+    {
+     "week": "2023-12-11",
+     "actual": 12640,
+     "synthetic": 12025
+    },
+    {
+     "week": "2023-12-18",
+     "actual": 11200,
+     "synthetic": 10355
+    },
+    {
+     "week": "2024-01-08",
+     "actual": 10540,
+     "synthetic": 10670
+    },
+    {
+     "week": "2024-01-15",
+     "actual": 11200,
+     "synthetic": 11268
+    },
+    {
+     "week": "2024-01-22",
+     "actual": 11625,
+     "synthetic": 11837
+    },
+    {
+     "week": "2024-01-29",
+     "actual": 12880,
+     "synthetic": 12411
+    },
+    {
+     "week": "2024-02-05",
+     "actual": 14060,
+     "synthetic": 13562
+    },
+    {
+     "week": "2024-02-12",
+     "actual": 14260,
+     "synthetic": 13814
+    },
+    {
+     "week": "2024-02-19",
+     "actual": 13740,
+     "synthetic": 13243
+    },
+    {
+     "week": "2024-02-26",
+     "actual": 13960,
+     "synthetic": 14007
+    },
+    {
+     "week": "2024-03-04",
+     "actual": 14240,
+     "synthetic": 14697
+    },
+    {
+     "week": "2024-03-11",
+     "actual": 14100,
+     "synthetic": 14622
+    },
+    {
+     "week": "2024-03-18",
+     "actual": 13800,
+     "synthetic": 14435
+    },
+    {
+     "week": "2024-03-25",
+     "actual": 13975,
+     "synthetic": 13821
+    },
+    {
+     "week": "2024-04-01",
+     "actual": 13175,
+     "synthetic": 13231
+    },
+    {
+     "week": "2024-04-08",
+     "actual": 13940,
+     "synthetic": 14038
+    },
+    {
+     "week": "2024-04-15",
+     "actual": 11860,
+     "synthetic": 12448
+    },
+    {
+     "week": "2024-04-22",
+     "actual": 12500,
+     "synthetic": 12728
+    },
+    {
+     "week": "2024-04-29",
+     "actual": 13520,
+     "synthetic": 13956
+    },
+    {
+     "week": "2024-05-06",
+     "actual": 14040,
+     "synthetic": 14292
+    },
+    {
+     "week": "2024-05-13",
+     "actual": 14180,
+     "synthetic": 14222
+    },
+    {
+     "week": "2024-05-20",
+     "actual": 14020,
+     "synthetic": 14181
+    },
+    {
+     "week": "2024-05-27",
+     "actual": 13780,
+     "synthetic": 13950
+    },
+    {
+     "week": "2024-06-03",
+     "actual": 13500,
+     "synthetic": 13440
+    },
+    {
+     "week": "2024-06-10",
+     "actual": 13550,
+     "synthetic": 13170
+    },
+    {
+     "week": "2024-06-17",
+     "actual": 13640,
+     "synthetic": 13341
+    },
+    {
+     "week": "2024-06-24",
+     "actual": 13480,
+     "synthetic": 13274
+    },
+    {
+     "week": "2024-07-01",
+     "actual": 13140,
+     "synthetic": 12770
+    },
+    {
+     "week": "2024-07-08",
+     "actual": 12140,
+     "synthetic": 12367
+    },
+    {
+     "week": "2024-07-15",
+     "actual": 12360,
+     "synthetic": 12496
+    },
+    {
+     "week": "2024-07-22",
+     "actual": 13980,
+     "synthetic": 14116
+    },
+    {
+     "week": "2024-07-29",
+     "actual": 14240,
+     "synthetic": 14670
+    },
+    {
+     "week": "2024-08-05",
+     "actual": 14440,
+     "synthetic": 14638
+    },
+    {
+     "week": "2024-08-12",
+     "actual": 14360,
+     "synthetic": 14674
+    },
+    {
+     "week": "2024-08-19",
+     "actual": 15960,
+     "synthetic": 14878
+    },
+    {
+     "week": "2024-08-26",
+     "actual": 15800,
+     "synthetic": 14894
+    },
+    {
+     "week": "2024-09-02",
+     "actual": 15340,
+     "synthetic": 14677
+    },
+    {
+     "week": "2024-09-09",
+     "actual": 15160,
+     "synthetic": 14415
+    },
+    {
+     "week": "2024-09-16",
+     "actual": 15500,
+     "synthetic": 14515
+    },
+    {
+     "week": "2024-09-23",
+     "actual": 14440,
+     "synthetic": 13873
+    },
+    {
+     "week": "2024-09-30",
+     "actual": 13620,
+     "synthetic": 13062
+    },
+    {
+     "week": "2024-10-07",
+     "actual": 13200,
+     "synthetic": 12921
+    },
+    {
+     "week": "2024-10-14",
+     "actual": 15260,
+     "synthetic": 14517
+    },
+    {
+     "week": "2024-10-21",
+     "actual": 15540,
+     "synthetic": 14846
+    },
+    {
+     "week": "2024-10-28",
+     "actual": 15280,
+     "synthetic": 14237
+    },
+    {
+     "week": "2024-11-04",
+     "actual": 15120,
+     "synthetic": 14288
+    },
+    {
+     "week": "2024-11-11",
+     "actual": 15340,
+     "synthetic": 14226
+    },
+    {
+     "week": "2024-11-18",
+     "actual": 15360,
+     "synthetic": 13667
+    },
+    {
+     "week": "2024-11-25",
+     "actual": 15480,
+     "synthetic": 14079
+    },
+    {
+     "week": "2024-12-02",
+     "actual": 15260,
+     "synthetic": 13580
+    },
+    {
+     "week": "2024-12-09",
+     "actual": 14780,
+     "synthetic": 13178
+    },
+    {
+     "week": "2024-12-16",
+     "actual": 14040,
+     "synthetic": 11957
+    },
+    {
+     "week": "2025-01-06",
+     "actual": 11520,
+     "synthetic": 10584
+    },
+    {
+     "week": "2025-01-13",
+     "actual": 11020,
+     "synthetic": 10956
+    },
+    {
+     "week": "2025-01-20",
+     "actual": 13320,
+     "synthetic": 12069
+    },
+    {
+     "week": "2025-02-10",
+     "actual": 15200,
+     "synthetic": 15039
+    },
+    {
+     "week": "2025-02-17",
+     "actual": 15960,
+     "synthetic": 14393
+    },
+    {
+     "week": "2025-02-24",
+     "actual": 16460,
+     "synthetic": 15085
+    },
+    {
+     "week": "2025-03-03",
+     "actual": 16620,
+     "synthetic": 15923
+    },
+    {
+     "week": "2025-03-10",
+     "actual": 16800,
+     "synthetic": 15822
+    },
+    {
+     "week": "2025-03-17",
+     "actual": 16980,
+     "synthetic": 16040
+    },
+    {
+     "week": "2025-03-24",
+     "actual": 16780,
+     "synthetic": 15971
+    },
+    {
+     "week": "2025-03-31",
+     "actual": 16820,
+     "synthetic": 15734
+    },
+    {
+     "week": "2025-04-07",
+     "actual": 16560,
+     "synthetic": 15784
+    },
+    {
+     "week": "2025-04-14",
+     "actual": 14375,
+     "synthetic": 13888
+    },
+    {
+     "week": "2025-04-28",
+     "actual": 15740,
+     "synthetic": 15159
+    },
+    {
+     "week": "2025-05-05",
+     "actual": 16860,
+     "synthetic": 16114
+    },
+    {
+     "week": "2025-05-12",
+     "actual": 16660,
+     "synthetic": 15942
+    },
+    {
+     "week": "2025-05-19",
+     "actual": 14380,
+     "synthetic": 13391
+    },
+    {
+     "week": "2025-05-26",
+     "actual": 16675,
+     "synthetic": 15675
+    },
+    {
+     "week": "2025-06-02",
+     "actual": 16500,
+     "synthetic": 15187
+    },
+    {
+     "week": "2025-06-09",
+     "actual": 16700,
+     "synthetic": 15404
+    },
+    {
+     "week": "2025-06-16",
+     "actual": 16680,
+     "synthetic": 15227
+    },
+    {
+     "week": "2025-06-23",
+     "actual": 16460,
+     "synthetic": 15081
+    },
+    {
+     "week": "2025-06-30",
+     "actual": 14525,
+     "synthetic": 13438
+    },
+    {
+     "week": "2025-07-07",
+     "actual": 14520,
+     "synthetic": 13289
+    },
+    {
+     "week": "2025-07-14",
+     "actual": 14440,
+     "synthetic": 13357
+    },
+    {
+     "week": "2025-07-21",
+     "actual": 16200,
+     "synthetic": 15243
+    },
+    {
+     "week": "2025-07-28",
+     "actual": 16133,
+     "synthetic": 15554
+    },
+    {
+     "week": "2025-08-04",
+     "actual": 17040,
+     "synthetic": 15773
+    },
+    {
+     "week": "2025-08-11",
+     "actual": 16640,
+     "synthetic": 15905
+    }
+   ]
+  },
+  "Macquarie Park": {
+   "weights": {
+    "Parramatta": 0.3149,
+    "Strathfield": 0.6851
+   },
+   "intercept": 0.004,
+   "pre_rmse_log": 0.0855,
+   "post_rmse_log": 0.1418,
+   "rmse_ratio": 1.66,
+   "effect_log": 0.1098,
+   "effect_pct": 11.61,
+   "weekly": [
+    {
+     "week": "2023-02-06",
+     "actual": 9760,
+     "synthetic": 10982
+    },
+    {
+     "week": "2023-02-13",
+     "actual": 10760,
+     "synthetic": 11230
+    },
+    {
+     "week": "2023-02-20",
+     "actual": 12940,
+     "synthetic": 11912
+    },
+    {
+     "week": "2023-02-27",
+     "actual": 13500,
+     "synthetic": 12077
+    },
+    {
+     "week": "2023-03-06",
+     "actual": 13280,
+     "synthetic": 11722
+    },
+    {
+     "week": "2023-03-13",
+     "actual": 13360,
+     "synthetic": 12046
+    },
+    {
+     "week": "2023-03-20",
+     "actual": 13140,
+     "synthetic": 12123
+    },
+    {
+     "week": "2023-03-27",
+     "actual": 11200,
+     "synthetic": 10621
+    },
+    {
+     "week": "2023-04-03",
+     "actual": 12825,
+     "synthetic": 11610
+    },
+    {
+     "week": "2023-04-10",
+     "actual": 9575,
+     "synthetic": 9996
+    },
+    {
+     "week": "2023-04-17",
+     "actual": 10080,
+     "synthetic": 10450
+    },
+    {
+     "week": "2023-04-24",
+     "actual": 12075,
+     "synthetic": 11249
+    },
+    {
+     "week": "2023-05-01",
+     "actual": 12800,
+     "synthetic": 12497
+    },
+    {
+     "week": "2023-05-08",
+     "actual": 12920,
+     "synthetic": 12242
+    },
+    {
+     "week": "2023-05-15",
+     "actual": 12520,
+     "synthetic": 12035
+    },
+    {
+     "week": "2023-05-22",
+     "actual": 11940,
+     "synthetic": 12056
+    },
+    {
+     "week": "2023-05-29",
+     "actual": 11520,
+     "synthetic": 11963
+    },
+    {
+     "week": "2023-06-05",
+     "actual": 11200,
+     "synthetic": 12121
+    },
+    {
+     "week": "2023-06-12",
+     "actual": 11400,
+     "synthetic": 11907
+    },
+    {
+     "week": "2023-06-19",
+     "actual": 10200,
+     "synthetic": 11665
+    },
+    {
+     "week": "2023-06-26",
+     "actual": 10100,
+     "synthetic": 10655
+    },
+    {
+     "week": "2023-07-03",
+     "actual": 10420,
+     "synthetic": 10295
+    },
+    {
+     "week": "2023-07-10",
+     "actual": 10260,
+     "synthetic": 10890
+    },
+    {
+     "week": "2023-07-17",
+     "actual": 10540,
+     "synthetic": 11926
+    },
+    {
+     "week": "2023-07-24",
+     "actual": 12280,
+     "synthetic": 12223
+    },
+    {
+     "week": "2023-07-31",
+     "actual": 13420,
+     "synthetic": 12518
+    },
+    {
+     "week": "2023-08-07",
+     "actual": 13620,
+     "synthetic": 12521
+    },
+    {
+     "week": "2023-08-14",
+     "actual": 13480,
+     "synthetic": 12716
+    },
+    {
+     "week": "2023-08-21",
+     "actual": 13160,
+     "synthetic": 12679
+    },
+    {
+     "week": "2023-08-28",
+     "actual": 13000,
+     "synthetic": 12530
+    },
+    {
+     "week": "2023-09-04",
+     "actual": 12680,
+     "synthetic": 12359
+    },
+    {
+     "week": "2023-09-11",
+     "actual": 10660,
+     "synthetic": 12394
+    },
+    {
+     "week": "2023-09-18",
+     "actual": 10280,
+     "synthetic": 12234
+    },
+    {
+     "week": "2023-09-25",
+     "actual": 12700,
+     "synthetic": 11486
+    },
+    {
+     "week": "2023-10-02",
+     "actual": 12850,
+     "synthetic": 11277
+    },
+    {
+     "week": "2023-10-09",
+     "actual": 12760,
+     "synthetic": 12327
+    },
+    {
+     "week": "2023-10-16",
+     "actual": 12600,
+     "synthetic": 12382
+    },
+    {
+     "week": "2023-10-23",
+     "actual": 12180,
+     "synthetic": 12272
+    },
+    {
+     "week": "2023-10-30",
+     "actual": 11740,
+     "synthetic": 12315
+    },
+    {
+     "week": "2023-11-06",
+     "actual": 11520,
+     "synthetic": 12054
+    },
+    {
+     "week": "2023-11-13",
+     "actual": 11300,
+     "synthetic": 12492
+    },
+    {
+     "week": "2023-11-20",
+     "actual": 10760,
+     "synthetic": 12854
+    },
+    {
+     "week": "2023-11-27",
+     "actual": 10400,
+     "synthetic": 12290
+    },
+    {
+     "week": "2023-12-04",
+     "actual": 10580,
+     "synthetic": 11926
+    },
+    {
+     "week": "2023-12-11",
+     "actual": 10460,
+     "synthetic": 10636
+    },
+    {
+     "week": "2023-12-18",
+     "actual": 9020,
+     "synthetic": 9417
+    },
+    {
+     "week": "2024-01-08",
+     "actual": 9140,
+     "synthetic": 9916
+    },
+    {
+     "week": "2024-01-15",
+     "actual": 9540,
+     "synthetic": 10309
+    },
+    {
+     "week": "2024-01-22",
+     "actual": 10175,
+     "synthetic": 10670
+    },
+    {
+     "week": "2024-01-29",
+     "actual": 10160,
+     "synthetic": 11288
+    },
+    {
+     "week": "2024-02-05",
+     "actual": 10760,
+     "synthetic": 12538
+    },
+    {
+     "week": "2024-02-12",
+     "actual": 11980,
+     "synthetic": 12753
+    },
+    {
+     "week": "2024-02-19",
+     "actual": 13860,
+     "synthetic": 12160
+    },
+    {
+     "week": "2024-02-26",
+     "actual": 14800,
+     "synthetic": 12882
+    },
+    {
+     "week": "2024-03-04",
+     "actual": 15220,
+     "synthetic": 13409
+    },
+    {
+     "week": "2024-03-11",
+     "actual": 14740,
+     "synthetic": 13376
+    },
+    {
+     "week": "2024-03-18",
+     "actual": 14420,
+     "synthetic": 13100
+    },
+    {
+     "week": "2024-03-25",
+     "actual": 14300,
+     "synthetic": 12415
+    },
+    {
+     "week": "2024-04-01",
+     "actual": 13125,
+     "synthetic": 11971
+    },
+    {
+     "week": "2024-04-08",
+     "actual": 13620,
+     "synthetic": 12747
+    },
+    {
+     "week": "2024-04-15",
+     "actual": 10875,
+     "synthetic": 11198
+    },
+    {
+     "week": "2024-04-22",
+     "actual": 10825,
+     "synthetic": 11825
+    },
+    {
+     "week": "2024-04-29",
+     "actual": 13900,
+     "synthetic": 12741
+    },
+    {
+     "week": "2024-05-06",
+     "actual": 13860,
+     "synthetic": 13156
+    },
+    {
+     "week": "2024-05-13",
+     "actual": 13780,
+     "synthetic": 12887
+    },
+    {
+     "week": "2024-05-20",
+     "actual": 13140,
+     "synthetic": 12944
+    },
+    {
+     "week": "2024-05-27",
+     "actual": 12560,
+     "synthetic": 12618
+    },
+    {
+     "week": "2024-06-03",
+     "actual": 11820,
+     "synthetic": 12186
+    },
+    {
+     "week": "2024-06-10",
+     "actual": 11700,
+     "synthetic": 11858
+    },
+    {
+     "week": "2024-06-17",
+     "actual": 10820,
+     "synthetic": 12203
+    },
+    {
+     "week": "2024-06-24",
+     "actual": 10600,
+     "synthetic": 12069
+    },
+    {
+     "week": "2024-07-01",
+     "actual": 10600,
+     "synthetic": 11182
+    },
+    {
+     "week": "2024-07-08",
+     "actual": 10740,
+     "synthetic": 10889
+    },
+    {
+     "week": "2024-07-15",
+     "actual": 11180,
+     "synthetic": 11113
+    },
+    {
+     "week": "2024-07-22",
+     "actual": 13280,
+     "synthetic": 12675
+    },
+    {
+     "week": "2024-07-29",
+     "actual": 14360,
+     "synthetic": 13382
+    },
+    {
+     "week": "2024-08-05",
+     "actual": 14700,
+     "synthetic": 13338
+    },
+    {
+     "week": "2024-08-12",
+     "actual": 14220,
+     "synthetic": 13458
+    },
+    {
+     "week": "2024-08-19",
+     "actual": 15660,
+     "synthetic": 13637
+    },
+    {
+     "week": "2024-08-26",
+     "actual": 15360,
+     "synthetic": 13837
+    },
+    {
+     "week": "2024-09-02",
+     "actual": 15260,
+     "synthetic": 13460
+    },
+    {
+     "week": "2024-09-09",
+     "actual": 14920,
+     "synthetic": 13329
+    },
+    {
+     "week": "2024-09-16",
+     "actual": 12660,
+     "synthetic": 13269
+    },
+    {
+     "week": "2024-09-23",
+     "actual": 12020,
+     "synthetic": 12749
+    },
+    {
+     "week": "2024-09-30",
+     "actual": 15280,
+     "synthetic": 11886
+    },
+    {
+     "week": "2024-10-07",
+     "actual": 15025,
+     "synthetic": 11705
+    },
+    {
+     "week": "2024-10-14",
+     "actual": 14820,
+     "synthetic": 13638
+    },
+    {
+     "week": "2024-10-21",
+     "actual": 14780,
+     "synthetic": 14077
+    },
+    {
+     "week": "2024-10-28",
+     "actual": 13940,
+     "synthetic": 13308
+    },
+    {
+     "week": "2024-11-04",
+     "actual": 13740,
+     "synthetic": 13331
+    },
+    {
+     "week": "2024-11-11",
+     "actual": 13580,
+     "synthetic": 13230
+    },
+    {
+     "week": "2024-11-18",
+     "actual": 13080,
+     "synthetic": 12790
+    },
+    {
+     "week": "2024-11-25",
+     "actual": 13040,
+     "synthetic": 13310
+    },
+    {
+     "week": "2024-12-02",
+     "actual": 12820,
+     "synthetic": 12575
+    },
+    {
+     "week": "2024-12-09",
+     "actual": 12860,
+     "synthetic": 11907
+    },
+    {
+     "week": "2024-12-16",
+     "actual": 11640,
+     "synthetic": 10714
+    },
+    {
+     "week": "2025-01-06",
+     "actual": 10140,
+     "synthetic": 9562
+    },
+    {
+     "week": "2025-01-13",
+     "actual": 10640,
+     "synthetic": 9625
+    },
+    {
+     "week": "2025-01-20",
+     "actual": 11860,
+     "synthetic": 10452
+    },
+    {
+     "week": "2025-02-10",
+     "actual": 12260,
+     "synthetic": 13622
+    },
+    {
+     "week": "2025-02-17",
+     "actual": 14300,
+     "synthetic": 13363
+    },
+    {
+     "week": "2025-02-24",
+     "actual": 16360,
+     "synthetic": 13877
+    },
+    {
+     "week": "2025-03-03",
+     "actual": 18060,
+     "synthetic": 14543
+    },
+    {
+     "week": "2025-03-10",
+     "actual": 18460,
+     "synthetic": 14274
+    },
+    {
+     "week": "2025-03-17",
+     "actual": 18140,
+     "synthetic": 14428
+    },
+    {
+     "week": "2025-03-24",
+     "actual": 17700,
+     "synthetic": 14398
+    },
+    {
+     "week": "2025-03-31",
+     "actual": 17400,
+     "synthetic": 14251
+    },
+    {
+     "week": "2025-04-07",
+     "actual": 17500,
+     "synthetic": 13999
+    },
+    {
+     "week": "2025-04-14",
+     "actual": 14467,
+     "synthetic": 11862
+    },
+    {
+     "week": "2025-04-28",
+     "actual": 16420,
+     "synthetic": 13457
+    },
+    {
+     "week": "2025-05-05",
+     "actual": 17080,
+     "synthetic": 14354
+    },
+    {
+     "week": "2025-05-12",
+     "actual": 16900,
+     "synthetic": 14280
+    },
+    {
+     "week": "2025-05-19",
+     "actual": 14460,
+     "synthetic": 12284
+    },
+    {
+     "week": "2025-05-26",
+     "actual": 16375,
+     "synthetic": 13933
+    },
+    {
+     "week": "2025-06-02",
+     "actual": 15240,
+     "synthetic": 13545
+    },
+    {
+     "week": "2025-06-09",
+     "actual": 14625,
+     "synthetic": 13874
+    },
+    {
+     "week": "2025-06-16",
+     "actual": 14680,
+     "synthetic": 13578
+    },
+    {
+     "week": "2025-06-23",
+     "actual": 13460,
+     "synthetic": 13681
+    },
+    {
+     "week": "2025-06-30",
+     "actual": 11750,
+     "synthetic": 11870
+    },
+    {
+     "week": "2025-07-07",
+     "actual": 13300,
+     "synthetic": 11524
+    },
+    {
+     "week": "2025-07-14",
+     "actual": 13060,
+     "synthetic": 11583
+    },
+    {
+     "week": "2025-07-21",
+     "actual": 13600,
+     "synthetic": 13523
+    },
+    {
+     "week": "2025-07-28",
+     "actual": 16667,
+     "synthetic": 13592
+    },
+    {
+     "week": "2025-08-04",
+     "actual": 17240,
+     "synthetic": 14040
+    },
+    {
+     "week": "2025-08-11",
+     "actual": 16680,
+     "synthetic": 14218
+    }
+   ]
+  }
+ }
+}
